@@ -1,88 +1,158 @@
 /**
- * @name Solana
- * @version 1.0.11
- * @author Disease#3749
- * @authorId 678469587444170762
- * @description macOS with barely any customization.
- * @source https://github.com/maenDisease/BetterDiscordStuff/tree/main/Themes/Solana
- * @invite BShu37e4jg
- * @website https://maendisease.github.io/
+* @name LilyPichu
+* @author Nyria#3863
+* @description A theme based on @Melonturtle_ stream design
+* @invite rtBQX5D3bD
+* @version 1.4
+* @donate https://ko-fi.com/nyria
 */
+@import url("https://nyri4.github.io/LilyPichu/main.css");
 
-/* Source */
-@import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Solana/Solana.css);
-
-/* Optional */
-@import url(https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css);
-@import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Solana/addon/mac-titlebar.css);
-@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css);
+/* Remove decorations */
+@import url("https://nyri4.github.io/LilyPichu/stuff/overlay.css");
 
 :root {
-    /* 
-    bdeditor.dev/theme/solana
-    is strongly recommended for customization 
-    */
+  /* --- User variables --- */
 
-    /* color control */
-    --accent-hue: 213;
-    --accent-saturation: 100%;
-    --accent-brightness: 50%;
-    --background-accent-hue: 213;
-    --background-accent-saturation: 100%;
-    --background-accent-brightness: 50%;
+  /* Jumping GIF */
+  --jumping-gif: url("https://i.imgur.com/dCd49s0.gif");
 
-    /* background image */
-    --background-image: initial;
-    --background-image-position: center;
-    --background-image-size: cover;
-    --background-image-blur: 0;
-    --background-overlay-opacity: 80%;
-    --background-overlay-color-lightness: 0;
-    --background-hue-shift-strength: 100%;
+  /* Background (if you want an image replace it by : 
 
-    /* window */
-    --window-background-image: initial;
-    --window-background-image-position: center;
-    --window-background-image-attachment: fixed;
-    --window-opacity: 100%;
-    --window-blur: 0;
-    --window-friends-blur: 0;
-    --window-margin: 24;
-    --window-margin-left: 0;
-    --window-border-radius: 10px;
-    --window-background-lightness: 0;
-    --window-accent-tint-strength: 5%;
+--background-tertiary-alt: url("image-link"); without that => */
+  --background-tertiary-alt: #ffc7d4;
 
-    /* chat */
-    --chat-bubble: 0;
-    --chat-bubble-background-color: var(--background-primary);
-    --chat-bubble-border-color: var(--background-primary-border-color);
-    --text-link-hue: 212;
-    --chat-text-brightness: 0;
+  /* Border-radius for the whole theme */
+  --border-radius: 20px;
+}
 
-    /* dock */
-    --home-icon: initial;
-    --favorites-icon: initial;
-    --dock-blur: var(--window-blur);
-    --dock-border-radius: 0;
+.theme-dark {
+  /* Text */
+  --text-normal: #f8e1e5;
+  --header-primary: #f8e1e5;
+  --interactive-normal: #fab1bd;
+  --channels-default: #f8e1e5;
 
-    /* sidebar */
-    --sidebar-width: 240px;
-    --members-width: 240px;
-    --sidebar-text-brightness: 0;
+  --text-muted: #e2c1c7;
+  --interactive-muted: #ad8c91;
 
-    /* floating */
-    --background-floating-blur: 20px;
-    --floating-background-lightness: 0;
-    --background-floating-opacity: 1;
-    --enable-floating-transparency: 1;
+  --header-secondary: #e2c1c7;
+  --interactive-hover: #e2c1c7;
+  --interactive-active: #e2c1c7;
 
-    /* font */
-    --custom-font-display: "";
-    --custom-font-regular: "";
-    --custom-font-primary: "";
-    --custom-font-code: "";
+  /* Background color */
+  --background-primary: #5e3640;
+  --background-secondary: #49292f;
+  --background-secondary-alt: #3b1d24;
+  --background-tertiary: #220f14;
+  --background-floating: #221115;
+  --background-accent: #c5536c;
+  --channeltextarea-background: var(--background-secondary);
+  --background-modifier-hover: rgba(56, 31, 31, 0.32);
+  --background-modifier-active: rgba(19, 12, 12, 0.32);
+  --background-modifier-selected: rgba(31, 21, 21, 0.32);
+  --toast-background: #5e3640 !important;
+  --toast-header: #3b1d24 !important;
+  --toast-contents: #49292f !important;
+  --toast-border: #49292f !important;
+  --input-background: var(--background-secondary);
 
-    /* other */
-    --enable-blur: 1;
+  /* Scrollbar */
+  --scrollbar-auto-thumb: var(--background-tertiary);
+  --scrollbar-auto-track: var(--background-secondary-alt);
+  --scrollbar-thin-thumb: var(--background-tertiary);
+  --scrollbar-thin-track: transparent;
+
+  /* Other */
+  --channel-text-area-placeholder: var(--interactive-normal);
+  --deprecated-quickswitcher-input-background: var(--background-primary);
+}
+.colorBrand-3cPPsm {
+  color: #c5536c;
+}
+.colorDefault-CDqZdO.focused-3qFvc8,
+.colorDefault-CDqZdO:active:not(.hideInteraction-2jPGL_) {
+  background-color: var(--background-modifier-hover) !important;
+}
+
+/* Buttons */
+.lookFilled-yCfaCM {
+  background-color: #c5536c !important;
+}
+.lookFilled-yCfaCM:active,
+.lookFilled-yCfaCM:hover {
+  background-color: #b64a61 !important;
+}
+.lookOutlined-3yKVGo:not(.colorWhite-1H92hK) {
+  color: #c5536c;
+  border-color: #c5536c;
+}
+
+/* Hover background */
+.colorDefault-CDqZdO.focused-3qFvc8,
+.colorDefault-CDqZdO:active:not(.hideInteraction-2jPGL_) {
+  color: var(--interactive-normal);
+}
+
+.theme-light {
+  /* Text */
+  --text-normal: #a86373;
+  --header-primary: #a86373;
+  --interactive-normal: #a86373;
+  --channels-default: #a86373;
+
+  --text-muted: #a86373;
+  --interactive-muted: #cf92a0;
+
+  --header-secondary: #cf92a0;
+  --interactive-hover: #be7d8c;
+  --interactive-active: #b36f7f;
+
+  /* Background color */
+  --background-primary: #ffffff;
+  --background-secondary: #ffeeee;
+  --background-secondary-alt: #fdc7c7;
+  --background-tertiary: #ffbbbb;
+  --background-floating: #ffbbbb;
+  --background-accent: #c5536c;
+  --channeltextarea-background: var(--background-secondary);
+  --background-modifier-hover: rgba(56, 31, 31, 0.062);
+  --background-modifier-active: rgba(19, 12, 12, 0.123);
+  --background-modifier-selected: rgba(31, 21, 21, 0.11);
+
+  /* Scrollbar */
+  --scrollbar-auto-thumb: var(--background-tertiary);
+  --scrollbar-auto-track: var(--background-secondary-alt);
+  --scrollbar-thin-thumb: var(--background-tertiary);
+  --scrollbar-thin-track: transparent;
+
+  /* Other */
+  --deprecated-quickswitcher-input-background: var(--background-primary);
+}
+
+.colorBrand-3cPPsm {
+  color: #c5536c;
+}
+.colorDefault-CDqZdO.focused-3qFvc8,
+.colorDefault-CDqZdO:active:not(.hideInteraction-2jPGL_) {
+  background-color: var(--background-modifier-hover) !important;
+}
+
+/* Buttons */
+.lookFilled-yCfaCM {
+  background-color: #c5536c !important;
+}
+.lookFilled-yCfaCM:active,
+.lookFilled-yCfaCM:hover {
+  background-color: #b64a61 !important;
+}
+.lookOutlined-3yKVGo:not(.colorWhite-1H92hK) {
+  color: #c5536c;
+  border-color: #c5536c;
+}
+
+/* Hover background */
+.colorDefault-CDqZdO.focused-3qFvc8,
+.colorDefault-CDqZdO:active:not(.hideInteraction-2jPGL_) {
+  color: var(--interactive-normal);
 }
