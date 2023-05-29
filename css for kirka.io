@@ -7,13 +7,6 @@
 @license      No License
 ==/UserStyle== */
 
-@-moz-document domain("kirka.io") {
-/*
-Kirka.io Custom CSS
-Made By: -BANNED-p̶r̶o̶o̶o̶o̶#̶3̶R̶L̶9̶V̶J̶
-Recommended Resolution: 1920x1080 FULLSCREEN!
-*/
-
 /* Colors buttons */
 :root {
   --sexColor: #ffa200;
